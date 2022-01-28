@@ -1,0 +1,10 @@
+.invisible {
+  cursor: default;
+  display: inline-block;
+  margin: 200px 0 0 700px;
+  opacity: 0;
+}
+
+input {
+  width: 300px;
+}

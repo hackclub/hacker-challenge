@@ -57,8 +57,9 @@ button {
 	outline: inherit;
 }
 
-.buttonStyleLink {
-  opacity: 0.5;
+button:disabled {
+  opacity: 0.25;
+  cursor: default;
 }
 
 button, .buttonStyleLink, .buttonStyleLink:visited, .buttonStyleLink:hover {
@@ -68,8 +69,13 @@ button, .buttonStyleLink, .buttonStyleLink:visited, .buttonStyleLink:hover {
   padding: 20px;
 }
 
+.buttonStyleLink {
+  transition: margin 100ms;
+}
+
 .buttonStyleLink:hover {
-  opacity: 1;
+  margin: 2px 0 0 2px;
+  transition: margin 100ms;
 }
 
 .main {

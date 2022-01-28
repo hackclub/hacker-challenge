@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (hiddenPasswordSubmitBtn) {
     hiddenPasswordSubmitBtn.addEventListener("click", event => {
       if (hiddenPasswordField.value == hiddenPasswordField.getAttribute("data-password")) {
-        window.location.href = "challenges/2";
+        window.location.href = "/challenges/2";
       };
     });
   };
@@ -23,14 +23,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   if (disabledBtn) {
     disabledBtn.addEventListener("click", event => {
-      window.location.href = "challenges/3";
+      window.location.href = "/challenges/3";
     });
   };
 
   // Read the JavaScript challenge
-  if (window.location.pathname == "challenges/3") {
+  if (window.location.pathname == "/challenges/3") {
     document.addEventListener("dblclick", function (e) {
-      window.location.href = "challenges/4";
+      window.location.href = "/challenges/4";
     });
   };
 
@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     storagePasswordSubmitBtn.addEventListener("click", event => {
       const password = localStorage.getItem("password");
       if (storagePasswordField.value == password) {
-        window.location.href = "challenges/7";
+        window.location.href = "/challenges/7";
       }
     });
   };
@@ -64,7 +64,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     consolePasswordSubmitBtn.addEventListener("click", event => {
       if (consolePasswordField.value == consolePassword) {
-        window.location.href = "challenges/8";
+        window.location.href = "/challenges/8";
       } else {
         if (clickCount >= 2) {
           console.log(`The password is ${consolePassword}`)

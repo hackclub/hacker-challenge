@@ -13,4 +13,4 @@ In Google Chrome, you can open your web inspector by right clicking in the brows
 - If you skip over a few tabs, the last tab we will be using is the "Application" tab. Here we will be working with the "Local Storage" area, which shows any data that our website has saved to your browser.
 
 ## Running locally
-Hacker Challenge uses Node.JS and Express to make the static routes nicer locally. To start the server, run `node app.js` in your terminal. Navigate to `http://localhost:3000/` in your browser to see the challenge in the browser.
+Hacker Challenge is a simple static site. To run locally, you can run `python -m SimpleHTTPServer` in your terminal and then open `http://localhost:8000` in your browser.

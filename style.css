@@ -69,6 +69,22 @@ button, .buttonStyleLink, .buttonStyleLink:visited, .buttonStyleLink:hover {
   padding: 20px;
 }
 
+.help {
+  border: 2px solid #7FFB4E;
+  border-radius: 50px;
+  float: right;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -30px;
+  padding: 10px 20px;
+  transition: font-size 100ms;
+}
+
+.help:hover {
+  cursor: pointer;
+  font-size: 35px;
+}
+
 .buttonStyleLink {
   transition: margin 100ms;
 }
@@ -79,8 +95,8 @@ button, .buttonStyleLink, .buttonStyleLink:visited, .buttonStyleLink:hover {
 }
 
 .main {
-  margin: 50px auto;
-  width: 800px;
+  margin: 100px auto 0;
+  width: 900px;
 }
 
 .challenge {

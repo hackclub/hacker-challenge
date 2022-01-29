@@ -6,9 +6,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
   console.log("Click the 'Sources' tab to read the HTML/CSS/JavaScript source files.")
   console.log("Click the 'Application' tab to read the local storage.")
 
+  // Help section
+  const helpBtn = document.querySelector(".help-button");
+  const helpBlurb = document.querySelector(".help-blurb");
+
+  if (helpBtn) {
+    helpBtn.addEventListener("click", event => {
+      helpBlurb.classList.toggle("hidden");
+    });
+  };
+
   // Hidden password challenge
-  const hiddenPasswordSubmitBtn = document.querySelector("button.hiddenPassword");
-  const hiddenPasswordField = document.querySelector("input.hiddenPassword");
+  const hiddenPasswordSubmitBtn = document.querySelector("button.hidden-password");
+  const hiddenPasswordField = document.querySelector("input.hidden-password");
 
   if (hiddenPasswordSubmitBtn) {
     hiddenPasswordSubmitBtn.addEventListener("click", event => {

@@ -71,30 +71,30 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
 
 .help-section {
   float: right;
-  /* margin-top: 160px; */
 }
 
 .help-button {
   border: 2px solid #7FFB4E;
   border-radius: 50px;
+  cursor: pointer;
   float: right;
   font-weight: bold;
   font-size: 24px;
   margin-right: 15px;
   padding: 5px 12px;
-  transition: font-size 100ms;
+  opacity: 1;
+  transition: opacity 100ms;
 }
 
-.help-button:hover {
-  cursor: pointer;
-  font-size: 28px;
+.help-button.hidden {
+  opacity: 0.5;
 }
 
 .help-blurb {
   border: 1px solid #7FFB4E;
   border-radius: 2px;
   float: right;
-  padding: 20px;
+  padding: 0 20px;
   opacity: 1;
   transition: opacity 100ms;
   width: 310px;

@@ -13,6 +13,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (helpBtn) {
     helpBtn.addEventListener("click", event => {
       helpBlurb.classList.toggle("hidden");
+      helpBtn.classList.toggle("hidden");
     });
   };
 
@@ -70,7 +71,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   if (consolePasswordSubmitBtn) {
     console.log('-------------------------------------------------')
-    console.log(`Click the submit button on this page ${clickMax - clickCount} more times to receive the password.`)
+    console.log(`Click the submit button on this page ${clickMax - clickCount} times to receive the password.`)
 
     consolePasswordSubmitBtn.addEventListener("click", event => {
       if (consolePasswordField.value == consolePassword) {

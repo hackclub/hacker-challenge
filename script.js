@@ -6,18 +6,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
   console.log("Click the 'Sources' tab to read the HTML/CSS/JavaScript source files.")
   console.log("Click the 'Application' tab to read the local storage.")
 
-  var errorTimer;
-
-  // Form error handling
-  function throwError() {
-    errorTimer && clearTimeout(errorTimer);
-    document.querySelector(".error").classList.remove("hidden");
-
-    errorTimer = setTimeout(() => {
-      document.querySelector(".error").classList.add("hidden");
-    }, 3000);
-  }
-
   // Help section
   const helpBtn = document.querySelector(".help-button");
   const helpBlurb = document.querySelector(".help-blurb");
@@ -106,4 +94,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
       };
     });
   };
+
+  // Form error handling
+  var errorTimer;
+
+  function throwError() {
+    errorTimer && clearTimeout(errorTimer);
+    document.querySelector(".error").classList.remove("hidden");
+
+    errorTimer = setTimeout(() => {
+      document.querySelector(".error").classList.add("hidden");
+    }, 3000);
+  }
 });

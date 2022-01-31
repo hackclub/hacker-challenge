@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (hiddenPasswordSubmitBtn) {
     hiddenPasswordSubmitBtn.addEventListener("click", event => {
       if (hiddenPasswordField.value == hiddenPasswordField.getAttribute("data-password")) {
-        window.location.href = "/challenges/2.html";
+        window.location.href = "/challenges/bat.html";
       };
     });
   };
@@ -34,14 +34,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   if (disabledBtn) {
     disabledBtn.addEventListener("click", event => {
-      window.location.href = "/challenges/3.html";
+      window.location.href = "/challenges/cow.html";
     });
   };
 
   // Read the JavaScript challenge
-  if (window.location.pathname == "/challenges/3.html") {
+  if (window.location.pathname == "/challenges/cow.html") {
     document.addEventListener("dblclick", function (e) {
-      window.location.href = "/challenges/4.html";
+      window.location.href = "/challenges/duck.html";
     });
   };
 
@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     storagePasswordSubmitBtn.addEventListener("click", event => {
       const password = localStorage.getItem("password");
       if (storagePasswordField.value == password) {
-        window.location.href = "/challenges/7.html";
+        window.location.href = "/challenges/gecko.html";
       }
     });
   };
@@ -65,7 +65,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // JavaScript Console challenge
   const consolePasswordSubmitBtn = document.querySelector("button.console");
   const consolePasswordField = document.querySelector("input.console");
-  const consolePassword = `1nt${1+2}rp${0}l4tion`;
+  const consolePassword = `pr${1+2}st${0}`;
   var clickCount = 0;
   var clickMax = 3;
 
@@ -75,7 +75,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     consolePasswordSubmitBtn.addEventListener("click", event => {
       if (consolePasswordField.value == consolePassword) {
-        window.location.href = "/challenges/8.html";
+        window.location.href = "/challenges/hare.html";
       } else {
         if (clickCount >= 2) {
           console.log(`The password is ${consolePassword}`)

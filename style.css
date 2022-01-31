@@ -101,7 +101,9 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
 }
 
 .hidden {
+  cursor: default;
   opacity: 0;
+  pointer-events: none;
 }
 
 .form {

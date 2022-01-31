@@ -143,3 +143,12 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
   top: 0;
   width: 400px;
 }
+
+.password-img {
+  background-image: url("/images/pw.png");
+  background-size: contain;
+  display: none;
+  height: 50px;
+  margin: 0 auto;
+  width: 400px;
+}

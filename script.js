@@ -51,11 +51,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const storagePasswordSubmitBtn = document.querySelector("button.storage");
   const storagePasswordField = document.querySelector("input.storage");
   const storage = window.localStorage;
-  const storagePassword = "alacazam";
-
-  storage.setItem("password", storagePassword);
+  const storagePassword = "h0ud1n1";
 
   if (storagePasswordSubmitBtn) {
+    storage.setItem("password", storagePassword);
     storagePasswordSubmitBtn.addEventListener("click", event => {
       const password = localStorage.getItem("password");
       if (storagePasswordField.value == password) {
@@ -64,6 +63,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
         throwError();
       }
     });
+  } else {
+    storage.removeItem("password", storagePassword);
   };
 
   // JavaScript Console challenge

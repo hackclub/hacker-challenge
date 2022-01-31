@@ -6,6 +6,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
   console.log("Click the 'Sources' tab to read the HTML/CSS/JavaScript source files.")
   console.log("Click the 'Application' tab to read the local storage.")
 
+  var errorTimer;
+
+  // Form error handling
+  function throwError() {
+    errorTimer && clearTimeout(errorTimer);
+    document.querySelector(".error").classList.remove("hidden");
+
+    errorTimer = setTimeout(() => {
+      document.querySelector(".error").classList.add("hidden");
+    }, 3000);
+  }
+
   // Help section
   const helpBtn = document.querySelector(".help-button");
   const helpBlurb = document.querySelector(".help-blurb");
@@ -13,7 +25,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (helpBtn) {
     helpBtn.addEventListener("click", event => {
       helpBlurb.classList.toggle("hidden");
-      helpBtn.classList.toggle("hidden");
+      helpBtn.classList.toggle("closed");
     });
   };
 
@@ -25,6 +37,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     hiddenPasswordSubmitBtn.addEventListener("click", event => {
       if (hiddenPasswordField.value == hiddenPasswordField.getAttribute("data-password")) {
         window.location.href = "/challenges/bat.html";
+      } else {
+        throwError();
       };
     });
   };
@@ -58,6 +72,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
       const password = localStorage.getItem("password");
       if (storagePasswordField.value == password) {
         window.location.href = "/challenges/gecko.html";
+      } else {
+        throwError();
       }
     });
   };
@@ -77,6 +93,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if (consolePasswordField.value == consolePassword) {
         window.location.href = "/challenges/hare.html";
       } else {
+        if (!consolePasswordField.value) {
+          throwError;
+        }
+
         if (clickCount >= 2) {
           console.log(`The password is ${consolePassword}`)
         } else {

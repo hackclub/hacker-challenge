@@ -15,7 +15,7 @@
         <p>The last line of the Console says to <strong>click the submit button on this page 3 times</strong> to receive the password.</p>
         <p>After clicking the submit button 3 times, the password is displayed in the console.</p>
       </div>
-      <a class="help-button">?</a>
+      <a class="help-button closed">?</a>
     </div>
 
     <div class="main">
@@ -25,8 +25,11 @@
         </h1>
         <h2>Challenge #7: The console contains the answer</h2>
         <div class="challenge">
-          <input class="console" type="text" placeholder="Enter password" />
-          <button class="console" type="submit">Submit</button>
+          <div class="form">
+            <input class="console" type="text" placeholder="Enter password" />
+            <button class="console" type="submit">Submit</button>
+          </div>
+          <div class="error">INCORRECT PASSWORD</div>
         </div>
       </div>
     </div>

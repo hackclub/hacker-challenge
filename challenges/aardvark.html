@@ -14,7 +14,7 @@
         <p>Open the <strong>"Elements"</strong> tab and expand the <em>body</em> section in the HTML.</p>
         <p>Keep expanding down the HTML tree until you find the <em>input</em> element. There, you will find a <em>data-password</em> attribute that contains the password.</p>
       </div>
-      <a class="help-button hidden">?</a>
+      <a class="help-button closed">?</a>
     </div>
 
     <div class="main">
@@ -24,8 +24,11 @@
         </h1>
         <h2>Challenge #1: Find the hidden password</h2>
         <div class="challenge">
-          <input class="hidden-password" data-password="abracadabra" type="text" placeholder="Enter password" />
-          <button class="hidden-password" type="submit">Submit</button>
+          <div class="form">
+            <input class="hidden-password" data-password="abracadabra" type="text" placeholder="Enter password" />
+            <button class="hidden-password" type="submit">Submit</button>
+          </div>
+          <div class="error hidden">INCORRECT PASSWORD</div>
         </div>
       </div>
     </div>

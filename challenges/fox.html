@@ -15,7 +15,7 @@
         <p>Click the newly-visible URL to view the storage data. There, you will see a <em>key</em> and a <em>value</em>.</p>
         <p>The <em>value</em> is your password.</p>
       </div>
-      <a class="help-button">?</a>
+      <a class="help-button closed">?</a>
     </div>
 
     <div class="main">
@@ -25,8 +25,11 @@
         </h1>
         <h2>Challenge #6: Find the password in Local Storage</h2>
         <div class="challenge">
-          <input class="storage" type="text" placeholder="Enter password" />
-          <button class="storage" type="submit">Submit</button>
+          <div class="form">
+            <input class="storage" type="text" placeholder="Enter password" />
+            <button class="storage" type="submit">Submit</button>
+          </div>
+          <div class="error">INCORRECT PASSWORD</div>
         </div>
       </div>
     </div>

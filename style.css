@@ -133,6 +133,7 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
   border-top: 1px solid #7FFB4E;
   margin-top: 25px;
   padding-top: 50px;
+  position: relative;
 }
 
 .invisible-link {
@@ -140,4 +141,12 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
   display: inline-block;
   margin: 200px 0 0 700px;
   opacity: 0;
+}
+
+.blocker {
+  background: #7FFB4E;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  width: 400px;
 }

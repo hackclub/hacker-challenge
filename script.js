@@ -82,9 +82,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if (consolePasswordField.value == consolePassword) {
         window.location.href = "/challenges/hare.html";
       } else {
-        if (!consolePasswordField.value) {
-          throwError;
-        }
+        throwError();
 
         if (clickCount >= 2) {
           console.log(`The password is ${consolePassword}`)

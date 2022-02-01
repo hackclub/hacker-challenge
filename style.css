@@ -91,6 +91,7 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
 }
 
 .help-blurb {
+  background-color: #000;
   border: 1px solid #7FFB4E;
   border-radius: 2px;
   float: right;
@@ -126,9 +127,9 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
   transition: margin 100ms;
 }
 
-.main, .index {
+.main {
   margin: 100px auto 0;
-  width: 900px;
+  width: 750px;
 }
 
 .challenge {

@@ -22,6 +22,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   };
 
+  // Press enter to submit
+  document.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      const btn = document.querySelector("button[type='submit']");
+      btn && btn.click();
+    }
+  });
+
   // Hidden password challenge
   const hiddenPasswordSubmitBtn = document.querySelector("button.hidden-password");
   const hiddenPasswordField = document.querySelector("input.hidden-password");

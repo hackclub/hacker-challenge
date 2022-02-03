@@ -127,6 +127,10 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
   transition: margin 100ms;
 }
 
+.classic-link {
+  border-bottom: 1px solid #7FFB4E;
+}
+
 .main {
   margin: 100px auto 0;
   width: 750px;

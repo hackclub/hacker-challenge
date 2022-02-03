@@ -84,8 +84,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const consolePasswordSubmitBtn = document.querySelector("button.console");
   const consolePasswordField = document.querySelector("input.console");
   const consolePassword = `pr${1+2}st${0}`;
-  var clickCount = 0;
-  var clickMax = 3;
+  let clickCount = 0;
+  let clickMax = 3;
 
   if (consolePasswordSubmitBtn) {
     console.log('-------------------------------------------------')
@@ -123,7 +123,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   };
 
   // Form error handling
-  var errorTimer;
+  let errorTimer;
 
   function throwError() {
     errorTimer && clearTimeout(errorTimer);

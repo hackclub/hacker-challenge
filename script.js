@@ -54,7 +54,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   };
 
   // Read the JavaScript challenge
-  if (window.location.pathname == "/challenges/cow.html") {
+  if (document.body.id == "js-challenge") {
     document.addEventListener("dblclick", function (e) {
       window.location.href = "/challenges/duck.html";
     });
@@ -63,11 +63,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Local Storage challenge
   const storagePasswordSubmitBtn = document.querySelector("button.storage");
   const storagePasswordField = document.querySelector("input.storage");
-  const storage = window.localStorage;
   const storagePassword = "h0ud1n1";
 
   if (storagePasswordSubmitBtn) {
-    storage.setItem("password", storagePassword);
+    localStorage.setItem("password", storagePassword);
     storagePasswordSubmitBtn.addEventListener("click", event => {
       const password = localStorage.getItem("password");
       if (storagePasswordField.value == password) {
@@ -110,7 +109,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Styles challenge
   const stylesPasswordSubmitBtn = document.querySelector("button.styles-btn");
   const stylesPasswordField = document.querySelector("input.styles-password");
-  const stylesPassword="hocus pocus"
+  const stylesPassword = "hocus pocus"
 
   if (stylesPasswordSubmitBtn) {
     stylesPasswordSubmitBtn.addEventListener("click", event => {
@@ -126,7 +125,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   let errorTimer;
 
   function throwError() {
-    errorTimer && clearTimeout(errorTimer);
+    clearTimeout(errorTimer);
+
     document.querySelector(".error").classList.remove("hidden");
 
     errorTimer = setTimeout(() => {

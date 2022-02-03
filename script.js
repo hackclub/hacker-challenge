@@ -11,7 +11,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
   console.log("Click the 'Sources' tab to read the HTML/CSS/JavaScript source files.")
   console.log("Click the 'Application' tab to read the local storage.")
 
+  //
+  // ---------------------------------------------------------
   // Help section
+  // ---------------------------------------------------------
+  //
+
   const helpBtn = document.querySelector(".help-button");
   const helpBlurb = document.querySelector(".help-blurb");
 
@@ -22,15 +27,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   };
 
-  // Press enter to submit
-  document.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      const btn = document.querySelector("button[type='submit']");
-      btn && btn.click();
-    }
-  });
-
+  //
+  // ---------------------------------------------------------
   // Hidden password challenge
+  // ---------------------------------------------------------
+  //
+
   const hiddenPasswordSubmitBtn = document.querySelector("button.hidden-password");
   const hiddenPasswordField = document.querySelector("input.hidden-password");
 
@@ -44,7 +46,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   };
 
+  //
+  // ---------------------------------------------------------
   // Disabled button challenge
+  // ---------------------------------------------------------
+  //
+
   const disabledBtn = document.querySelector("button[disabled]");
 
   if (disabledBtn) {
@@ -53,14 +60,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   };
 
+  //
+  // ---------------------------------------------------------
   // Read the JavaScript challenge
+  // ---------------------------------------------------------
+  //
+
   if (document.body.id == "js-challenge") {
     document.addEventListener("dblclick", function (e) {
       window.location.href = "/challenges/duck.html";
     });
   };
 
+  //
+  // ---------------------------------------------------------
   // Local Storage challenge
+  // ---------------------------------------------------------
+  //
+
   const storagePasswordSubmitBtn = document.querySelector("button.storage");
   const storagePasswordField = document.querySelector("input.storage");
   const storagePassword = "h0ud1n1";
@@ -76,10 +93,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
     });
   } else {
-    storage.removeItem("password", storagePassword);
+    localStorage.removeItem("password", storagePassword);
   };
 
+  //
+  // ---------------------------------------------------------
   // JavaScript Console challenge
+  // ---------------------------------------------------------
+  //
+
   const consolePasswordSubmitBtn = document.querySelector("button.console");
   const consolePasswordField = document.querySelector("input.console");
   const consolePassword = `pr${1+2}st${0}`;
@@ -106,7 +128,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   };
 
+  //
+  // ---------------------------------------------------------
   // Styles challenge
+  // ---------------------------------------------------------
+  //
+
   const stylesPasswordSubmitBtn = document.querySelector("button.styles-btn");
   const stylesPasswordField = document.querySelector("input.styles-password");
   const stylesPassword = "hocus pocus"
@@ -121,16 +148,31 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   };
 
-  // Form error handling
-  let errorTimer;
+  //
+  // ---------------------------------------------------------
+  // Press enter to submit challenge
+  // ---------------------------------------------------------
+  //
 
-  function throwError() {
-    clearTimeout(errorTimer);
-
-    document.querySelector(".error").classList.remove("hidden");
-
-    errorTimer = setTimeout(() => {
-      document.querySelector(".error").classList.add("hidden");
-    }, 3000);
-  }
+  document.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      const btn = document.querySelector("button[type='submit']");
+      if (btn) {
+        btn.click();
+      }
+    }
+  });
 });
+
+// Form error handling
+let errorTimer;
+
+function throwError() {
+  clearTimeout(errorTimer);
+
+  document.querySelector(".error").classList.remove("hidden");
+
+  errorTimer = setTimeout(() => {
+    document.querySelector(".error").classList.add("hidden");
+  }, 3000);
+}

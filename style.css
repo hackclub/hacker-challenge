@@ -83,7 +83,6 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
   margin-right: 15px;
   padding: 5px 12px;
   opacity: 1;
-  transition: opacity 100ms;
 }
 
 .help-button.closed {

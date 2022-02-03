@@ -7,13 +7,13 @@
 
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("Welcome to the browser inspector! You are in the Console tab, which shows you JavaScript logs and errors.");
-  console.log("Click the 'Elements' tab to read the HTML.")
-  console.log("Click the 'Sources' tab to read the HTML/CSS/JavaScript source files.")
-  console.log("Click the 'Application' tab to read the local storage.")
+  console.log("Click the \"Elements\" tab to read the HTML.")
+  console.log("Click the \"Sources\" tab to read the HTML/CSS/JavaScript source files.")
+  console.log("Click the \"Application\" tab to read the local storage.")
 
   //
   // ---------------------------------------------------------
-  // Help section
+  // Help button functionality
   // ---------------------------------------------------------
   //
 
@@ -109,7 +109,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   let clickMax = 3;
 
   if (consolePasswordSubmitBtn) {
-    console.log('-------------------------------------------------')
+    console.log("-------------------------------------------------")
     console.log(`Click the submit button on this page ${clickMax - clickCount} times to receive the password.`)
 
     consolePasswordSubmitBtn.addEventListener("click", event => {
@@ -154,8 +154,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // ---------------------------------------------------------
   //
 
-  document.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
+  document.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
       const btn = document.querySelector("button[type='submit']");
       if (btn) {
         btn.click();

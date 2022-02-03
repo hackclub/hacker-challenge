@@ -48,13 +48,13 @@ a, a:visited, a:hover {
 }
 
 button {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 button:disabled {
@@ -150,8 +150,8 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
 .password-img {
   background-image: url("/images/pw.png");
   background-size: contain;
-  display: none;
   height: 50px;
   margin: 0 auto;
+  visibility: hidden;
   width: 400px;
 }

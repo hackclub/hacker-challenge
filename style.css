@@ -100,10 +100,6 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
   width: 310px;
 }
 
-.help-blurb.hidden {
-  transition: opacity 100ms;
-}
-
 .hidden {
   cursor: default;
   opacity: 0;

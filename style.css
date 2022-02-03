@@ -97,8 +97,11 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
   float: right;
   padding: 0 20px;
   opacity: 1;
-  transition: opacity 100ms;
   width: 310px;
+}
+
+.help-blurb.hidden {
+  transition: opacity 100ms;
 }
 
 .hidden {

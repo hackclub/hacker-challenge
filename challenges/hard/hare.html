@@ -5,18 +5,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>Hacker Challenge</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
 
   <body>
-    <div class="help-section">
-      <div class="help-blurb hidden">
-        <p>Right click in the browser window and click the last option, <strong>"Inspect"</strong>.</p>
-        <p>Open the <strong>"Elements"</strong> tab and expand the <em>body</em> section in the HTML.</p>
-        <p>Keep expanding down the HTML tree until you find the <em>blocker</em> class.</p>
-        <p>Click the element and hit <em>delete</em>. This will uncover your link.</p>
+    <div class="timer-section">
+      <div class="timer">
+        <span>00:00:00</span>
       </div>
-      <a class="help-button closed">?</a>
+      <a class="timer-button closed">O</a>
     </div>
 
     <div class="main">
@@ -32,6 +29,7 @@
       </div>
     </div>
 
-    <script src="../script.js"></script>
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/hard.js"></script>
   </body>
 </html>

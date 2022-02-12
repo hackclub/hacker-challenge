@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Hacker Challenge</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div class="timer-section">
+      <div class="timer">
+        <span>00:00:00</span>
+      </div>
+      <a class="timer-button closed">O</a>
+    </div>
+
+    <div class="main">
+      <section>
+        <h1>
+          <a href="/">Hacker Challenge</a>
+        </h1>
+        <h2>Challenge #1: Find the password hidden in the HTML</h2>
+        <div class="challenge">
+          <div class="form">
+            <input class="hidden-password" data-password="abracadabra" type="text" placeholder="Enter password" />
+            <button class="hidden-password" type="submit">Submit</button>
+          </div>
+          <div class="error hidden">INCORRECT PASSWORD</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/hard.js"></script>
+  </body>
+</html>

@@ -5,18 +5,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>Hacker Challenge</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
 
   <body>
-    <div class="help-section">
-      <div class="help-blurb hidden">
-        <p>Right click in the browser window and click the last option, <strong>"Inspect"</strong>.</p>
-        <p>Open the <strong>"Application"</strong> tab and expand the <em>Local Storage</em> section.</p>
-        <p>Click the newly-visible URL to view the storage data. There, you will see a <em>key</em> and a <em>value</em>.</p>
-        <p>The <em>value</em> is your password.</p>
+    <div class="timer-section">
+      <div class="timer">
+        <span>00:00:00</span>
       </div>
-      <a class="help-button closed">?</a>
+      <a class="timer-button closed">O</a>
     </div>
 
     <div class="main">
@@ -35,6 +32,7 @@
       </div>
     </div>
 
-    <script src="../script.js"></script>
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/hard.js"></script>
   </body>
 </html>

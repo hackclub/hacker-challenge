@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Hacker Challenge</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div class="help-section">
+      <div class="help-blurb hidden">
+        <p>Right click in the browser window and click the last option, <strong>"Inspect"</strong>.</p>
+        <p>Open the <strong>"Elements"</strong> tab and expand the <em>body</em> section in the HTML.</p>
+        <p>Keep expanding down the HTML tree until you find the <em>password-img</em> class.</p>
+        <p>On the right side of the inspector, you will see a <strong>Styles</strong> section. After clicking the element, you will see its current styles.</p>
+        <p>Uncheck the <em>visibility: hidden</em> style to show the image containing our password.</p>
+      </div>
+      <a class="help-button closed">?</a>
+    </div>
+
+    <div class="main">
+      <section>
+        <h1>
+          <a href="/">Hacker Challenge</a>
+        </h1>
+        <h2>Challenge #9: The styles are hiding our password!</h2>
+        <div class="challenge">
+          <div class="form">
+            <input class="styles-password" type="text" placeholder="Enter password" />
+            <button class="styles-btn" type="submit">Submit</button>
+          </div>
+          <div class="error hidden">INCORRECT PASSWORD</div>
+
+          <div class="password-img" />
+        </div>
+      </div>
+    </div>
+
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/normal.js"></script>
+  </body>
+</html>

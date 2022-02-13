@@ -37,10 +37,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
       window.location.href = "/timeover.html";
     }
 
-    setTimeout(updateTimer, 100);
+    setTimeout(updateTimer);
   };
 
-  setTimeout(updateTimer, 100);
+  setTimeout(updateTimer);
 
   const lastChallengeSubmitBtn = document.querySelector("button.styles-btn");
 

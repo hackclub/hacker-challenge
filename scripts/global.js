@@ -22,17 +22,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   //
   // ---------------------------------------------------------
-  // Styles challenge
+  // Network tab challenge
   // ---------------------------------------------------------
   //
 
-  const stylesPasswordSubmitBtn = document.querySelector("button.styles-btn");
-  const stylesPasswordField = document.querySelector("input.styles-password");
-  const stylesPassword = "hocus pocus"
+  const networkPasswordSubmitBtn = document.querySelector("button.network-btn");
+  const networkPasswordField = document.querySelector("input.network-password");
+  const networkPassword = "wahoo"
 
-  if (stylesPasswordSubmitBtn) {
-    stylesPasswordSubmitBtn.addEventListener("click", event => {
-      if (stylesPasswordField.value == stylesPassword) {
+  if (networkPasswordSubmitBtn) {
+    networkPasswordSubmitBtn.addEventListener("click", event => {
+      if (networkPasswordField.value == networkPassword) {
         window.location.href = "/complete.html";
       } else {
         throwError();

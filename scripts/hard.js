@@ -36,11 +36,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
       localStorage.removeItem("endTime");
       window.location.href = "/timeover.html";
     }
-
-    setTimeout(updateTimer);
   };
 
-  setTimeout(updateTimer);
+  setInterval(updateTimer);
 
   const lastChallengeSubmitBtn = document.querySelector("button.styles-btn");
 

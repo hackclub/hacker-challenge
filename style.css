@@ -70,7 +70,6 @@ button,
 .button-style-link:hover {
   border: 1px solid #7FFB4E;
   border-radius: 2px;
-  font-weight: bold;
   padding: 20px;
 }
 
@@ -136,8 +135,7 @@ button,
 }
 
 .button-style-link:hover {
-  margin: 2px 0 0 2px;
-  transition: margin 100ms;
+  font-weight: bold;
 }
 
 .classic-link {

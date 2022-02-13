@@ -41,7 +41,9 @@ input::placeholder {
   font-size: 20px;
 }
 
-a, a:visited, a:hover {
+a,
+a:visited,
+a:hover {
   color: #7FFB4E;
   display: inline-block;
   text-decoration: none;
@@ -62,14 +64,18 @@ button:disabled {
   cursor: default;
 }
 
-button, .button-style-link, .button-style-link:visited, .button-style-link:hover {
+button,
+.button-style-link,
+.button-style-link:visited,
+.button-style-link:hover {
   border: 1px solid #7FFB4E;
   border-radius: 2px;
   font-weight: bold;
   padding: 20px;
 }
 
-.help-section {
+.help-section,
+.timer-section {
   float: right;
 }
 
@@ -89,14 +95,23 @@ button, .button-style-link, .button-style-link:visited, .button-style-link:hover
   opacity: 0.5;
 }
 
+.help-blurb,
+.timer {
+  float: right;
+  opacity: 1;
+}
+
 .help-blurb {
   background-color: #000;
   border: 1px solid #7FFB4E;
   border-radius: 2px;
-  float: right;
   padding: 0 20px;
-  opacity: 1;
-  width: 310px;
+  width: 300px;
+}
+
+.timer {
+  padding-top: 10px;
+  width: 400px;
 }
 
 .hidden {

@@ -6,6 +6,9 @@
 //
 
 window.addEventListener("DOMContentLoaded", (event) => {
+  // Remove hard mode startTime
+  localStorage.removeItem("startTime");
+
   //
   // ---------------------------------------------------------
   // Hidden password challenge
@@ -103,26 +106,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
           clickCount++;
           console.log(`Click the submit button on this page ${clickMax - clickCount} more times to receive the password.`)
         };
-      };
-    });
-  };
-
-  //
-  // ---------------------------------------------------------
-  // Styles challenge
-  // ---------------------------------------------------------
-  //
-
-  const stylesPasswordSubmitBtn = document.querySelector("button.styles-btn");
-  const stylesPasswordField = document.querySelector("input.styles-password");
-  const stylesPassword = "hocus pocus"
-
-  if (stylesPasswordSubmitBtn) {
-    stylesPasswordSubmitBtn.addEventListener("click", event => {
-      if (stylesPasswordField.value == stylesPassword) {
-        window.location.href = "/complete.html";
-      } else {
-        throwError();
       };
     });
   };

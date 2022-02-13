@@ -1,10 +1,3 @@
-//
-// ---------------------------------------------------------
-// Hi! Are you here to find the answer to Challenge 3?
-// Scroll down to the "Read the JavaScript" section, your answer is hidden there!
-// ---------------------------------------------------------
-//
-
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("Welcome to the browser inspector! You are in the Console tab, which shows you JavaScript logs and errors.");
   console.log("Click the \"Elements\" tab to read the HTML.")

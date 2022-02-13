@@ -6,6 +6,41 @@
 //
 
 window.addEventListener("DOMContentLoaded", (event) => {
+
+  //
+  // ---------------------------------------------------------
+  // Set hard mode timer
+  // ---------------------------------------------------------
+  //
+
+  if (!localStorage.getItem("startTime")) {
+    localStorage.setItem("startTime", Date.now());
+  };
+
+  let challengeTimer;
+  const timerEl = document.querySelector(".timer");
+
+  function formatTime(t) {
+    return t.toString().substring(0, 2).padStart(2, '0')
+  }
+
+  function updateTimer() {
+    let timeSinceStart = new Date(Date.now() - localStorage.getItem("startTime"));
+    let minutes = formatTime(timeSinceStart.getMinutes());
+    let seconds = formatTime(timeSinceStart.getSeconds());
+    let milliseconds = formatTime(timeSinceStart.getMilliseconds());
+
+    timerEl.innerHTML = `${minutes}:${seconds}:${milliseconds}`;
+
+    if (timeSinceStart.getMinutes() >= 60) {
+      window.location.href = "/timeover.html";
+    }
+
+    setTimeout(updateTimer, 100);
+  };
+
+  setTimeout(updateTimer, 100);
+
   //
   // ---------------------------------------------------------
   // Hidden password challenge
@@ -103,26 +138,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
           clickCount++;
           console.log(`Click the submit button on this page ${clickMax - clickCount} more times to receive the password.`)
         };
-      };
-    });
-  };
-
-  //
-  // ---------------------------------------------------------
-  // Styles challenge
-  // ---------------------------------------------------------
-  //
-
-  const stylesPasswordSubmitBtn = document.querySelector("button.styles-btn");
-  const stylesPasswordField = document.querySelector("input.styles-password");
-  const stylesPassword = "hocus pocus"
-
-  if (stylesPasswordSubmitBtn) {
-    stylesPasswordSubmitBtn.addEventListener("click", event => {
-      if (stylesPasswordField.value == stylesPassword) {
-        window.location.href = "/complete.html";
-      } else {
-        throwError();
       };
     });
   };

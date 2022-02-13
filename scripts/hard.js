@@ -6,7 +6,6 @@
 //
 
 window.addEventListener("DOMContentLoaded", (event) => {
-
   //
   // ---------------------------------------------------------
   // Set hard mode timer
@@ -14,7 +13,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   //
 
   if (!localStorage.getItem("startTime")) {
-    localStorage.setItem("startTime", Date.now());
+    localStorage.setItem("startTime", new Date().getTime());
   };
 
   let challengeTimer;
@@ -25,7 +24,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function updateTimer() {
-    let timeSinceStart = new Date(Date.now() - localStorage.getItem("startTime"));
+    let timeSinceStart = new Date(new Date().getTime() - localStorage.getItem("startTime"));
     let minutes = formatTime(timeSinceStart.getMinutes());
     let seconds = formatTime(timeSinceStart.getSeconds());
     let milliseconds = formatTime(timeSinceStart.getMilliseconds());
@@ -40,6 +39,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
   };
 
   setTimeout(updateTimer, 100);
+
+  const lastChallengeSubmitBtn = document.querySelector("button.styles-btn");
+
+  if (lastChallengeSubmitBtn) {
+    lastChallengeSubmitBtn.addEventListener("click", event => {
+      localStorage.setItem("endTime", Date.now());
+    });
+  };
 
   //
   // ---------------------------------------------------------

@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>Hacker Challenge</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
 
   <body>
@@ -13,8 +13,8 @@
       <div class="help-blurb hidden">
         <p>Right click in the browser window and click the last option, <strong>"Inspect"</strong>.</p>
         <p>Open the <strong>"Elements"</strong> tab and expand the <em>body</em> section in the HTML.</p>
-        <p>Keep expanding down the HTML tree until you find the <em>&lt;a&gt;</em> tag. There, you will find the <em>href</em> attribute.</p>
-        <p>Right click on the <em>href</em> and click edit attribute. Update it to the animal you see in the <em>data-next-animal</em> attribute. The &lt;a&gt; will now link to the correct page.</p>
+        <p>Keep expanding down the HTML tree until you find the <em>&lt;a&gt;</em> tag. There, you will find an <em>invisible-link</em> class.</p>
+        <p>Double click the class and press the <strong>delete</strong> key to remove the class. The button will now be visible to click.</p>
       </div>
       <a class="help-button closed">?</a>
     </div>
@@ -24,13 +24,14 @@
         <h1>
           <a href="/">Hacker Challenge</a>
         </h1>
-        <h2>Challenge #5: Challenge++</h2>
+        <h2>Challenge #4: Where's the challenge?</h2>
         <div class="challenge">
-          <a class="button-style-link" href="/challenges/eel.html" data-next-animal="fox">This button should link to the next challenge</a>
+          <a class="button-style-link hidden" href="/challenges/normal/eel.html">I am an invisible link! Remove my "hidden" class to see me!</a>
         </div>
       </div>
     </div>
 
-    <script src="../script.js"></script>
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/normal.js"></script>
   </body>
 </html>

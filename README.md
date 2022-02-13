@@ -21,8 +21,8 @@ Hacker Challenge is a simple static site. To run locally, clone this GitHub repo
 Do you have an idea for a challenge to add? Feel free to contribute by creating a pull request or adding an issue with the suggestion.
 
 ### Adding a new challenge
-- Duplicate the [challenges/template.html](challenges/template.html) page and edit it as you need.
-- Rename the file to an animal in alphabetical order from the last page, so people can't immediately guess the next challenge page. Feel free to use [this site](https://a-z-animals.com/animals/) to stoke your creativity.
-- Add a section [in the JavaScript](script.js) as necessary.
+- Duplicate the [challenges/template.html](challenges/template.html) page in both the `hard` and `normal` folder and edit it as you need.
+- Rename the files to an animal in alphabetical order from the last page, so people can't immediately guess the next challenge page. Feel free to use [this site](https://a-z-animals.com/animals/) to stoke your creativity.
+- Add a section [in the global](scripts/global.js), [in the normal](scripts/normal.js), or [in the hard](scripts/hard.js) scripts as necessary.
 - Add any [styles in the CSS](style.css) as necessary.
 - Create a [Pull Request](https://github.com/jessicard/hacker-challenge/compare) when you're ready!

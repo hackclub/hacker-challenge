@@ -5,16 +5,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>Hacker Challenge</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
 
-  <body id="js-challenge">
+  <body>
     <div class="help-section">
       <div class="help-blurb hidden">
         <p>Right click in the browser window and click the last option, <strong>"Inspect"</strong>.</p>
-        <p>Open the <strong>"Sources"</strong> tab and open the <em>script.js</em> file in the file viewer.</p>
-        <p>Scroll until you find the <em>// Read the JavaScript challenge</em> comment. There, you will see the code for the page.</p>
-        <p>The code specifies that when you <strong>double click</strong> on the webpage, the url will update to the next challenge page.</p>
+        <p>Open the <strong>"Elements"</strong> tab and expand the <em>body</em> section in the HTML.</p>
+        <p>Keep expanding down the HTML tree until you find the <em>button</em> element. There, you will find a <em>disabled</em> attribute.</p>
+        <p>Double click the attribute and press the <strong>delete</strong> key to remove the attribute. The button will now be available to click.</p>
       </div>
       <a class="help-button closed">?</a>
     </div>
@@ -24,13 +24,14 @@
         <h1>
           <a href="/">Hacker Challenge</a>
         </h1>
-        <h2>Challenge #3: Find the answer in the code</h2>
+        <h2>Challenge #2: Click the button</h2>
         <div class="challenge">
-          <p>Read the JavaScript file to figure out how to solve me.</p>
+          <button type="button" disabled>Click me!</button>
         </div>
       </div>
     </div>
 
-    <script src="../script.js"></script>
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/normal.js"></script>
   </body>
 </html>

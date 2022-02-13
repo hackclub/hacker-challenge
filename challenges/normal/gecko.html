@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Hacker Challenge</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div class="help-section">
+      <div class="help-blurb hidden">
+        <p>Right click in the browser window and click the last option, <strong>"Inspect"</strong>.</p>
+        <p>Open the <strong>"Console"</strong> tab and read the console.</p>
+        <p>The last line of the Console says to <strong>click the submit button on this page 3 times</strong> to receive the password.</p>
+        <p>After clicking the submit button 3 times, the password is displayed in the console.</p>
+      </div>
+      <a class="help-button closed">?</a>
+    </div>
+
+    <div class="main">
+      <section>
+        <h1>
+          <a href="/">Hacker Challenge</a>
+        </h1>
+        <h2>Challenge #7: The console contains the answer</h2>
+        <div class="challenge">
+          <div class="form">
+            <input class="console" type="text" placeholder="Enter password" />
+            <button class="console" type="submit">Submit</button>
+          </div>
+          <div class="error hidden">INCORRECT PASSWORD</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/normal.js"></script>
+  </body>
+</html>

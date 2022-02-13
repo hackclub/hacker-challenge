@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>Hacker Challenge</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
 
   <body>
@@ -13,8 +13,8 @@
       <div class="help-blurb hidden">
         <p>Right click in the browser window and click the last option, <strong>"Inspect"</strong>.</p>
         <p>Open the <strong>"Elements"</strong> tab and expand the <em>body</em> section in the HTML.</p>
-        <p>Keep expanding down the HTML tree until you find the <em>button</em> element. There, you will find a <em>disabled</em> attribute.</p>
-        <p>Double click the attribute and press the <strong>delete</strong> key to remove the attribute. The button will now be available to click.</p>
+        <p>Keep expanding down the HTML tree until you find the <em>blocker</em> class.</p>
+        <p>Click the element and hit <em>delete</em>. This will uncover your link.</p>
       </div>
       <a class="help-button closed">?</a>
     </div>
@@ -24,13 +24,15 @@
         <h1>
           <a href="/">Hacker Challenge</a>
         </h1>
-        <h2>Challenge #2: Click the button</h2>
+        <h2>Challenge #8: Move the blocker</h2>
         <div class="challenge">
-          <button type="button" disabled>Click me!</button>
+          <a class="button-style-link" href="/challenges/normal/iguana.html">Go to the next challenge</a>
+          <div class="blocker" />
         </div>
       </div>
     </div>
 
-    <script src="../script.js"></script>
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/normal.js"></script>
   </body>
 </html>

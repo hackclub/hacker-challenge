@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Hacker Challenge</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div class="timer-section">
+      <div class="timer"></div>
+    </div>
+
+    <div class="main">
+      <section>
+        <h1>
+          <a href="/">Hacker Challenge</a>
+        </h1>
+        <!-- Below are some common element types used throughout the challenges.
+             Feel free to modify any of these for your use, or add new elements
+             necessary for your challenge. -->
+
+        <!-- Update the number and the challenge title -->
+        <h2>Challenge #000: A title with a hint of where to look</h2>
+        <div class="challenge">
+          <!-- An example button style link. Replace the link text with what the link does. -->
+          <a class="button-style-link" href="#">Replace this text with what the link does</a>
+
+          <!-- An example hidden link. Replace the link text with what the link does. -->
+          <a class="button-style-link hidden" href="#">Replace this text with what the link does</a>
+
+          <!-- An example disabled button. Replace the text with what the button does. -->
+          <button type="button" disabled>Replace this text with what the button does</button>
+
+          <!-- An example form. Change the class name to something specific to
+               this challenge, and add any attributes you need. You will need to
+               add a section in the JavaScript to listen for and handle the button
+               click and password check. There are existing examples of this
+               behaviour in the JavaScript to model off of. -->
+          <div class="form">
+            <input class="example-password" type="text" placeholder="Enter password" />
+            <button class="example-password" type="submit">Submit</button>
+          </div>
+          <div class="error hidden">INCORRECT PASSWORD</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/hard.js"></script>
+  </body>
+</html>

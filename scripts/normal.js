@@ -6,26 +6,8 @@
 //
 
 window.addEventListener("DOMContentLoaded", (event) => {
-  console.log("Welcome to the browser inspector! You are in the Console tab, which shows you JavaScript logs and errors.");
-  console.log("Click the \"Elements\" tab to read the HTML.")
-  console.log("Click the \"Sources\" tab to read the HTML/CSS/JavaScript source files.")
-  console.log("Click the \"Application\" tab to read the local storage.")
-
-  //
-  // ---------------------------------------------------------
-  // Help button functionality
-  // ---------------------------------------------------------
-  //
-
-  const helpBtn = document.querySelector(".help-button");
-  const helpBlurb = document.querySelector(".help-blurb");
-
-  if (helpBtn) {
-    helpBtn.addEventListener("click", event => {
-      helpBlurb.classList.toggle("hidden");
-      helpBtn.classList.toggle("closed");
-    });
-  };
+  // Remove hard mode startTime
+  localStorage.removeItem("startTime");
 
   //
   // ---------------------------------------------------------
@@ -39,7 +21,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (hiddenPasswordSubmitBtn) {
     hiddenPasswordSubmitBtn.addEventListener("click", event => {
       if (hiddenPasswordField.value == hiddenPasswordField.getAttribute("data-password")) {
-        window.location.href = "/challenges/bat.html";
+        window.location.href = "/challenges/normal/bat.html";
       } else {
         throwError();
       };
@@ -56,7 +38,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   if (disabledBtn) {
     disabledBtn.addEventListener("click", event => {
-      window.location.href = "/challenges/cow.html";
+      window.location.href = "/challenges/normal/cow.html";
     });
   };
 
@@ -68,7 +50,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   if (document.body.id == "js-challenge") {
     document.addEventListener("dblclick", function (e) {
-      window.location.href = "/challenges/duck.html";
+      window.location.href = "/challenges/normal/duck.html";
     });
   };
 
@@ -87,7 +69,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     storagePasswordSubmitBtn.addEventListener("click", event => {
       const password = localStorage.getItem("password");
       if (storagePasswordField.value == password) {
-        window.location.href = "/challenges/gecko.html";
+        window.location.href = "/challenges/normal/gecko.html";
       } else {
         throwError();
       }
@@ -114,7 +96,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     consolePasswordSubmitBtn.addEventListener("click", event => {
       if (consolePasswordField.value == consolePassword) {
-        window.location.href = "/challenges/hare.html";
+        window.location.href = "/challenges/normal/hare.html";
       } else {
         throwError();
 
@@ -127,52 +109,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
       };
     });
   };
-
-  //
-  // ---------------------------------------------------------
-  // Styles challenge
-  // ---------------------------------------------------------
-  //
-
-  const stylesPasswordSubmitBtn = document.querySelector("button.styles-btn");
-  const stylesPasswordField = document.querySelector("input.styles-password");
-  const stylesPassword = "hocus pocus"
-
-  if (stylesPasswordSubmitBtn) {
-    stylesPasswordSubmitBtn.addEventListener("click", event => {
-      if (stylesPasswordField.value == stylesPassword) {
-        window.location.href = "/complete.html";
-      } else {
-        throwError();
-      };
-    });
-  };
-
-  //
-  // ---------------------------------------------------------
-  // Press enter to submit challenge
-  // ---------------------------------------------------------
-  //
-
-  document.addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      const btn = document.querySelector("button[type='submit']");
-      if (btn) {
-        btn.click();
-      }
-    }
-  });
 });
-
-// Form error handling
-let errorTimer;
-
-function throwError() {
-  clearTimeout(errorTimer);
-
-  document.querySelector(".error").classList.remove("hidden");
-
-  errorTimer = setTimeout(() => {
-    document.querySelector(".error").classList.add("hidden");
-  }, 3000);
-}

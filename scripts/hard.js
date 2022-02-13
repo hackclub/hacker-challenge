@@ -32,6 +32,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     timerEl.innerHTML = `${minutes}:${seconds}:${milliseconds}`;
 
     if (timeSinceStart.getMinutes() >= 60) {
+      localStorage.removeItem("startTime");
+      localStorage.removeItem("endTime");
       window.location.href = "/timeover.html";
     }
 

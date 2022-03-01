@@ -110,3 +110,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   };
 });
+
+  //
+  // ---------------------------------------------------------
+  // Styles challenge
+  // ---------------------------------------------------------
+  //
+
+  const stylesPasswordSubmitBtn = document.querySelector("button.styles-btn");
+  const stylesPasswordField = document.querySelector("input.styles-password");
+  const stylesPassword = "hocus pocus"
+
+  if (stylesPasswordSubmitBtn) {
+    stylesPasswordSubmitBtn.addEventListener("click", event => {
+      if (stylesPasswordField.value == stylesPassword) {
+        window.location.href = "/challenges/normal/jellyfish.html";
+      } else {
+        throwError();
+      };
+    });
+  };

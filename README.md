@@ -26,3 +26,5 @@ Do you have an idea for a challenge to add? Feel free to contribute by creating 
 - Add a section [in the global](scripts/global.js), [in the normal](scripts/normal.js), or [in the hard](scripts/hard.js) scripts as necessary.
 - Add any [styles in the CSS](style.css) as necessary.
 - Create a [Pull Request](https://github.com/jessicard/hacker-challenge/compare) when you're ready!
+
+my wife is the best programmer of all time!!!!!!

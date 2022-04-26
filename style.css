@@ -1,6 +1,12 @@
+
+:root {
+  --main-bg-color: #000;
+  --main-color: #7FFB4E;
+}
+
 html {
-  background-color: #000;
-  color: #7FFB4E;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
   font-family: "Courier New";
   font-size: 20px;
 }
@@ -18,15 +24,15 @@ h2 {
 }
 
 input {
-  background-color: #000;
+  background-color: var(--main-bg-color);
   background-image: none;
   background-color: transparent;
-  border: 1px solid #7FFB4E;
+  border: 1px solid var(--main-color);
   border-radius: 2px;
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
-  color: #7FFB4E;
+  color: var(--main-color);
   font-family: "Courier New";
   font-size: 20px;
   flex: 1;
@@ -35,7 +41,7 @@ input {
 }
 
 input::placeholder {
-  color: #7FFB4E;
+  color: var(--main-color);
   opacity: 0.5;
   font-family: "Courier New";
   font-size: 20px;
@@ -44,7 +50,7 @@ input::placeholder {
 a,
 a:visited,
 a:hover {
-  color: #7FFB4E;
+  color: var(--main-color);
   display: inline-block;
   text-decoration: none;
 }
@@ -68,7 +74,7 @@ button,
 .button-style-link,
 .button-style-link:visited,
 .button-style-link:hover {
-  border: 1px solid #7FFB4E;
+  border: 1px solid var(--main-color);
   border-radius: 2px;
   padding: 20px;
 }
@@ -79,7 +85,7 @@ button,
 }
 
 .help-button {
-  border: 2px solid #7FFB4E;
+  border: 2px solid var(--main-color);
   border-radius: 50px;
   cursor: pointer;
   float: right;
@@ -101,8 +107,8 @@ button,
 }
 
 .help-blurb {
-  background-color: #000;
-  border: 1px solid #7FFB4E;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-color);
   border-radius: 2px;
   padding: 0 20px;
   width: 300px;
@@ -139,7 +145,7 @@ button,
 }
 
 .classic-link {
-  border-bottom: 1px solid #7FFB4E;
+  border-bottom: 1px solid var(--main-color);
 }
 
 .main {
@@ -148,14 +154,14 @@ button,
 }
 
 .challenge {
-  border-top: 1px solid #7FFB4E;
+  border-top: 1px solid var(--main-color);
   margin-top: 25px;
   padding-top: 50px;
   position: relative;
 }
 
 .blocker {
-  background: #7FFB4E;
+  background: var(--main-color);
   height: 200px;
   position: absolute;
   top: 0;
